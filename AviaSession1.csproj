@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF897BD3-3538-453C-9337-22FF86C9DC20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AviaSession1</RootNamespace>
+    <AssemblyName>AviaSession1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AdaptiveLTB.xaml.cs">
+      <DependentUpon>AdaptiveLTB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Add user.xaml.cs">
+      <DependentUpon>Add user.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BD\ControlLogin.cs">
+      <DependentUpon>AS1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User\AmonicUser.xaml.cs">
+      <DependentUpon>AmonicUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AmonicAdmin.xaml.cs">
+      <DependentUpon>AmonicAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BD\AS1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AS1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Country.cs">
+      <DependentUpon>AS1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit role.xaml.cs">
+      <DependentUpon>Edit role.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="No logout detected.xaml.cs">
+      <DependentUpon>No logout detected.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BD\Office.cs">
+      <DependentUpon>AS1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\QueryBD.cs" />
+    <Compile Include="BD\Role.cs">
+      <DependentUpon>AS1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\User.cs">
+      <DependentUpon>AS1.tt</DependentUpon>
+    </Compile>
+    <Page Include="AdaptiveLTB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Add user.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User\AmonicUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\AmonicAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Edit role.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BD\AS1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AS1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\AS1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AS1.edmx</DependentUpon>
+    </Compile>
+    <Page Include="No logout detected.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="BD\AS1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AS1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BD\AS1.edmx.diagram">
+      <DependentUpon>AS1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BD\AS1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AS1.Context.cs</LastGenOutput>
+      <DependentUpon>AS1.edmx</DependentUpon>
+    </Content>
+    <Content Include="BD\AS1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AS1.edmx</DependentUpon>
+      <LastGenOutput>AS1.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Images\DS2017_TP09_2_colors%404x.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_%402x.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_swatches%404x1.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_with_bg%402x.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_with_bg%404x.png" />
+    <Resource Include="Images\DS2017_TP09_2_colors_with_bg.png" />
+    <Resource Include="Images\DS2017_TP09_Airplane-Amonic-Single.png" />
+    <Resource Include="Images\DS2017_TP09_Airplane-Amonic.png" />
+    <Resource Include="Images\DS2017_TP09_black%402x.png" />
+    <Resource Include="Images\DS2017_TP09_black%404x.png" />
+    <Resource Include="Images\DS2017_TP09_black.png" />
+    <Resource Include="Images\DS2017_TP09_color%402x.png" />
+    <Resource Include="Images\DS2017_TP09_color%404x.png" />
+    <Resource Include="Images\DS2017_TP09_color.png" />
+    <Resource Include="Images\DS2017_TP09_color_swatches%404x1.png" />
+    <Resource Include="Images\DS2017_TP09_color_swatches.jpg" />
+    <Resource Include="Images\DS2017_TP09_mono%402x.png" />
+    <Resource Include="Images\DS2017_TP09_mono%404x.png" />
+    <Resource Include="Images\DS2017_TP09_mono.png" />
+    <Resource Include="Images\DS2017_TP09_mono_swatches%404x1.png" />
+    <Resource Include="Images\white%402x.png" />
+    <Resource Include="Images\white%404x.png" />
+    <Resource Include="Images\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
